@@ -1,8 +1,9 @@
+**Security-_Testing**
 "Company": CODETECH IT SOLUTIONS
 
 "Name":GOGULAPATI LAKSHMI POORNIMA
 
-"INTERN ID":CTIS5653
+"INTERN ID": CTIS5653
 
 "DOMAIN": SOFTWARE TESTING
 
@@ -11,83 +12,67 @@
 "MENTOR": NEELA SANTHOSH
 
 PROJECT TITLE: Web Application Security Testing
+
+DESCRIPTION: This project focuses on conducting basic security testing on a sample web application to identify common vulnerabilities such as SQL Injection and Cross-Site Scripting (XSS).
+
+The testing was performed on an intentionally vulnerable demo web application for learning and ethical testing purposes.
+
+OBJECTIVE:
+
+Identify security vulnerabilities in a web application.
+Understand common web security risks.
+Document findings and mitigation strategies.
+TESTED APPLICATION: https://demo.testfire.net/
+
+TESTING TYPE: Manual Security Testing.
+
+VULNERABILITIES TESTED:
+
+SQL Injection
+Cross-Site Scripting (XSS)
+TOOLS USED:
+
+Web Browser (Google Chrome)
+Visual Studio Code (for documentation)
+DELIVERABLES:
+
+README.md
+SECURITY_TESTING_REPORT.txt
+SQLinjectiontest.png
+SQLtesting_vulnerable.png
+XSStest.png
+XSSresults.png
+
+![Login Screenshot](SQLinjectiontest.png)
+
 ------------------------------------------------------------
 
-Objective:
-To perform manual security testing on a demo banking web application and identify common vulnerabilities such as SQL Injection and Cross-Site Scripting (XSS). The testing was conducted for educational purposes on a legally permitted demo website.
+Test Case 2: Account Summary and Transaction History  
+
+Description: After successful login, account summary and transaction history pages were accessed.  
+
+Result: Account details and transaction history displayed correctly.  
+
+Screenshot:  
+![Account Summary](SQLtesting_vulnerable.png)
 
 ------------------------------------------------------------
 
-TEST CASE 1: SQL INJECTION TEST
+Test Case 3: Cross-Site Scripting (XSS) Testing  
 
-Vulnerability Type: SQL Injection
-Description: SQL Injection is a vulnerability where attackers inject malicious SQL queries into input fields to manipulate the database.
+Description: XSS vulnerability was tested by entering a script payload into the input field.  
 
-Test Input:
-Username: ' OR '1'='1
-Password: ' OR '1'='1
+Test Payload:  
+<script>alert('XSS')</script>  
 
-Expected Result:
-Application should reject invalid login attempts.
+Result: Alert popup appeared successfully.  
 
-Actual Result:
-Application displayed invalid login message and did not allow login bypass.
+Status: Vulnerable  
 
-Status: Not Vulnerable
-
-Screenshot:
-![SQL Injection Test](SQLinjectiontest.png)
-![SQL Injection Result](SQLtesting_vulnerable.png)
-
-------------------------------------------------------------
-
-TEST CASE 2: CROSS-SITE SCRIPTING (XSS) TEST
-
-Vulnerability Type: Cross-Site Scripting (XSS)
-Description: XSS allows attackers to inject malicious scripts into web pages viewed by other users.
-
-Test Input:
-<script>alert('XSS')</script>
-
-Expected Result:
-Application should block or sanitize script input.
-
-Actual Result:
-Alert popup appeared successfully.
-
-Status: Vulnerable
-
-Screenshot:
-![XSS Test](XSStest.png)
+Screenshot:  
+![XSS Test](XSStest.png)  
 ![XSS Result](XSSresults.png)
 
 ------------------------------------------------------------
 
-TEST CASE 3: ACCOUNT ACCESS TESTING
-
-Test Description: Verify secure access to account summary and transaction history pages.
-
-Valid Credentials:
-Username: jsmith
-Password: demo1234
-
-Test Scenario 1:
-Login using valid credentials.
-
-Result:
-Login successful and account summary displayed.
-
-Test Scenario 2:
-Directly accessing account page without login.
-
-Result:
-Application redirected user to login page.
-
-Status: Secure Access Control Implemented
-
-------------------------------------------------------------
-
-Overall Conclusion:
-The application is protected against basic SQL Injection attacks.
-The application is vulnerable to Cross-Site Scripting (XSS).
-Proper input validation and output encoding mechanisms should be implemented to enhance security.
+Conclusion: The application login and account access features are functioning properly. However, the application is vulnerable to Cross-Site Scripting (XSS). Proper input validation and output encoding should be implemented to enhance security.
