@@ -20,21 +20,23 @@ The testing was performed on an intentionally vulnerable demo web application fo
 
 OBJECTIVE:
 
-Identify security vulnerabilities in a web application.
-Understand common web security risks.
-Document findings and mitigation strategies.
+1.Identify security vulnerabilities in a web application.
+2.Understand common web security risks.
+3.Document findings and mitigation strategies.
 TESTED APPLICATION: https://demo.testfire.net/
 
 TESTING TYPE: Manual Security Testing.
 
 VULNERABILITIES TESTED:
 
-SQL Injection
-Cross-Site Scripting (XSS)
+1.SQL Injection
+2.Cross-Site Scripting (XSS)
+
 TOOLS USED:
 
-Web Browser (Google Chrome)
-Visual Studio Code (for documentation)
+1.Web Browser (Google Chrome)
+2.Visual Studio Code (for documentation)
+
 DELIVERABLES:
 
 README.md
@@ -77,4 +79,5 @@ Screenshot:
 ------------------------------------------------------------
 
 Conclusion: The application login and account access features are functioning properly. However, the application is vulnerable to Cross-Site Scripting (XSS). Proper input validation and output encoding should be implemented to enhance security.
+
 
