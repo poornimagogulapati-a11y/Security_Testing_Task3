@@ -1,4 +1,5 @@
-**Security-_Testing**
+**Security-_Testing**    
+
 "Company": CODETECH IT SOLUTIONS
 
 "Name":GOGULAPATI LAKSHMI POORNIMA
@@ -76,3 +77,4 @@ Screenshot:
 ------------------------------------------------------------
 
 Conclusion: The application login and account access features are functioning properly. However, the application is vulnerable to Cross-Site Scripting (XSS). Proper input validation and output encoding should be implemented to enhance security.
+
