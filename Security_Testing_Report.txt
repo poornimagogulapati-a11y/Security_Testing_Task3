@@ -1,0 +1,119 @@
+PROJECT NAME: Web Application Security Testing
+TESTED APPLICATION: https://demo.testfire.net/
+
+APPLICATION NAME: Altoro Mutual (Demo Banking Application)
+TESTING TYPE: Manual Security Testing
+TESTER: GOGULAPATI LAKSHMI POORNIMA
+INTERN ID: CTIS5653
+DOMAIN: Software Testing
+ORGANIZATION: CODETECH IT SOLUTIONS
+DATE: 25-02-2026
+
+====================================================
+
+OBJECTIVE
+
+The objective of this task is to perform security testing on a sample web application to identify vulnerabilities such as SQL Injection (SQLi) and Cross-Site Scripting (XSS).
+
+The testing was conducted for educational purposes on a legally permitted demo website.
+
+====================================================
+
+SQL INJECTION TEST
+
+Description:
+SQL Injection is a vulnerability where attackers inject malicious SQL code into input fields to manipulate database queries and gain unauthorized access.
+
+Test Input Used:
+Username: ' OR '1'='1
+Password: ' OR '1'='1
+
+Procedure:
+The SQL injection payload was entered in the login form to check whether authentication could be bypassed.
+
+Result:
+The application did not allow login bypass.
+An invalid login message was displayed.
+
+Status:
+NOT VULNERABLE (Protected against basic SQL Injection)
+
+Risk (If Vulnerable):
+Unauthorized access to sensitive data.
+
+Mitigation:
+
+Use Prepared Statements
+
+Implement Parameterized Queries
+
+Perform Proper Input Validation
+
+Use Stored Procedures
+
+Apply Least Privilege Principle
+
+====================================================
+
+CROSS-SITE SCRIPTING (XSS) TEST
+
+Description:
+Cross-Site Scripting (XSS) allows attackers to inject malicious scripts into web pages viewed by other users.
+
+Test Input Used:
+
+<script>alert('XSS')</script>
+
+Procedure:
+The script payload was entered in the search/input field to check if the application executes user-supplied JavaScript.
+
+Result:
+The JavaScript alert popup was successfully executed.
+This confirms that user input was not properly sanitized.
+
+Status:
+VULNERABLE
+
+Risk:
+Attackers can execute malicious scripts, leading to session hijacking, cookie theft, or data manipulation.
+
+Mitigation:
+
+Implement Input Sanitization
+
+Use Output Encoding
+
+Apply Content Security Policy (CSP)
+
+Validate and Filter User Inputs
+
+====================================================
+
+ACCOUNT ACCESS TESTING
+
+Description:
+Account summary and transaction history were accessed after successful login.
+
+Valid Credentials Used:
+Username: jsmith
+Password: demo1234
+
+Direct URL access without authentication was also tested.
+
+Result:
+The application allowed access after valid login.
+When trying to access account pages directly without login,
+the system redirected to the login page.
+
+Status:
+SECURE ACCESS CONTROL IMPLEMENTED
+
+====================================================
+
+OVERALL CONCLUSION
+
+The application is protected against basic SQL Injection attacks but is vulnerable to Cross-Site Scripting (XSS).
+
+Proper secure coding practices, strong input validation, and output encoding mechanisms should be implemented to improve security.
+
+This testing was conducted strictly for educational purposes on a legally permitted demo application
